@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kakaocsvview/static/css/main.08283f2d.css",
-    "main.js": "/kakaocsvview/static/js/main.944f55c5.js",
+    "main.js": "/kakaocsvview/static/js/main.99cf66b0.js",
     "static/js/787.a8c668bf.chunk.js": "/kakaocsvview/static/js/787.a8c668bf.chunk.js",
     "index.html": "/kakaocsvview/index.html",
     "main.08283f2d.css.map": "/kakaocsvview/static/css/main.08283f2d.css.map",
-    "main.944f55c5.js.map": "/kakaocsvview/static/js/main.944f55c5.js.map",
+    "main.99cf66b0.js.map": "/kakaocsvview/static/js/main.99cf66b0.js.map",
     "787.a8c668bf.chunk.js.map": "/kakaocsvview/static/js/787.a8c668bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08283f2d.css",
-    "static/js/main.944f55c5.js"
+    "static/js/main.99cf66b0.js"
   ]
 }

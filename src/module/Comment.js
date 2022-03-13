@@ -1,4 +1,4 @@
-import { Layout, Menu, Input, DatePicker, Select, Divider, PageHeader, List, Skeleton, Avatar } from "antd";
+import { Layout, Menu, Input, DatePicker, Select, Divider, PageHeader, List, Skeleton, Avatar, Alert } from "antd";
 import { useState, useEffect } from "react";
 import moment from "moment";
 
@@ -93,13 +93,20 @@ const Comment = ({ messageData, keywords, dateRange, userPick, setUserPick }) =>
     return (
         <Layout className="site-layout">
             <PageHeader className="site-page-header" title={keywords.length === 0 ? "전체" : "검색 결과"} subTitle={filteredMessage.length + "개의 내용이 표시됩니다."} />
+            {messageData.length === 0 ? <Alert
+      message="카카오톡에서 CSV 파일을 다운로드 받아 등록하세요"
+      description="CSV파일은 PC카톡 채팅방 설정 > 저장공관 관리에서 다운받을 수 있습니다. 해당 파일은 서버에 업로드되지 않으며 브라우저가 열려있는 동안만 브라우저 캐시에 저장됩니다. "
+      type="info"
+      showIcon
+      style={{whiteSpace:'pre-wrap', margin:"16px"}}
+    /> : ""}
             {/* <div onClick={refresh} >삭제</div> */}
             <div id="scrollableDiv" style={{ margin: "16px", maxHeight: "calc(100vh - 250px)", overflowY: "scroll" }}>
                 <InfiniteScroll
                     dataLength={messageNum}
                     next={loadMoreData}
                     hasMore={true}
-                    loader={<Skeleton avatar paragraph={{ rows: 1 }} active />}
+                    loader={filteredMessage.length === 0 ? "": <Skeleton avatar paragraph={{ rows: 1 }} active />}
                     endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
                     scrollableTarget="scrollableDiv"
                     refreshFunction={refresh}

@@ -92,10 +92,17 @@ const Comment = ({ messageData, keywords, dateRange, userPick, setUserPick }) =>
 
     return (
         <Layout className="site-layout">
-            <PageHeader className="site-page-header" title={keywords.length === 0 ? "전체" : "검색 결과"} subTitle={filteredMessage.length + "개의 내용이 표시됩니다."} />
+            <PageHeader className="site-page-header" title={keywords.length === 0 ? "전체" : "검색 결과"} subTitle={(pickedUser.length > 0 ? pickedUser.length : userPick.userList.length) + "명 / " + filteredMessage.length + "개의 내용이 표시됩니다."} />
             {messageData.length === 0 ? <Alert
-      message="카카오톡에서 CSV 파일을 다운로드 받아 등록하세요"
-      description="CSV파일은 PC카톡 채팅방 설정 > 저장공관 관리에서 다운받을 수 있습니다. 해당 파일은 서버에 업로드되지 않으며 브라우저가 열려있는 동안만 브라우저 캐시에 저장됩니다. "
+      message="카카오톡에서 CSV, txt 파일을 다운로드 받아 등록하세요"
+      description="맥에서 CSV파일은 PC카톡 채팅방 설정 > 저장공관 관리에서 다운받을 수 있습니다. 윈도우에서는 메뉴>대화내용 >대화 내보내기를 이용해서 txt파일을 받아주세요."
+      type="info"
+      showIcon
+      style={{whiteSpace:'pre-wrap', margin:"16px"}}
+    /> : ""}
+            {messageData.length === 0 ? <Alert
+      message="파일은 다른 사람에게 공유되지 않으니 걱정마세요."
+      description="해당 파일은 서버에 업로드되지 않으며 브라우저가 열려있는 동안만 브라우저 캐시에 저장됩니다."
       type="info"
       showIcon
       style={{whiteSpace:'pre-wrap', margin:"16px"}}
@@ -127,7 +134,7 @@ const Comment = ({ messageData, keywords, dateRange, userPick, setUserPick }) =>
                     />
                 </InfiniteScroll>
             </div>
-            <Footer style={{ textAlign: "center" }}>comanni ©2022 / 2022.03.13 업데이트 v0.0.1</Footer>
+            <Footer style={{ textAlign: "center" }}>comanni ©2022 / 2022.03.15 업데이트 v0.0.3</Footer>
         </Layout>
     );
 };

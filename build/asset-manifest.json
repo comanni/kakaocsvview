@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kakaocsvview/static/css/main.08283f2d.css",
+    "main.js": "/kakaocsvview/static/js/main.a13b9def.js",
+    "static/js/787.a8c668bf.chunk.js": "/kakaocsvview/static/js/787.a8c668bf.chunk.js",
+    "index.html": "/kakaocsvview/index.html",
+    "main.08283f2d.css.map": "/kakaocsvview/static/css/main.08283f2d.css.map",
+    "main.a13b9def.js.map": "/kakaocsvview/static/js/main.a13b9def.js.map",
+    "787.a8c668bf.chunk.js.map": "/kakaocsvview/static/js/787.a8c668bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08283f2d.css",
+    "static/js/main.a13b9def.js"
+  ]
+}
